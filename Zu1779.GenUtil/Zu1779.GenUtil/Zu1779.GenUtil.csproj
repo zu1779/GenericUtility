@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <Authors>Zu1779</Authors>
+    <PackageTags>Utility</PackageTags>
   </PropertyGroup>
 
 </Project>

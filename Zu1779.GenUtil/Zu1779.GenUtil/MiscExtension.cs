@@ -144,7 +144,7 @@
         public static string Singularize(this string word, params string[] except) =>
             word.EndsWith('s') && !except.Contains(word) ? word[0..^1] : word;
         public static IEnumerable<string> Singularize(this IEnumerable<string> words, params string[] exept) =>
-            words.Select(c => c.EndsWith('s') && !exept.Contains(c, ) ? c[0..^1] : c);
+            words.Select(c => c.EndsWith('s') && !exept.Contains(c, GenCompare.StringCI) ? c[0..^1] : c);
 
         public static TResult SelectObj<T, TResult>(this T obj, Func<T, TResult> prj) => prj(obj);
     }
@@ -162,8 +162,14 @@
 
         public bool Equals(T x, T y) => _comp(x, y);
         public int GetHashCode([DisallowNull] T obj) => _hash(obj);
-        public static IEqualityComparer<T> Gen<T>(Func<T, T, bool> comp, Func<T, int> hash) => new GenCompare<T>(comp, hash);
+    }
+    public class GenCompare
+    {
+        public static IEqualityComparer<TComp> Gen<TComp>(Func<TComp, TComp, bool> comp, Func<TComp, int> hash) =>
+            new GenCompare<TComp>(comp, hash);
         public static IEqualityComparer<string> String(bool ignoreCase = true) =>
             Gen((string x, string y) => string.Compare(x, y, ignoreCase) == 0, c => c.GetHashCode());
+        public static IEqualityComparer<string> StringCS => String(false);
+        public static IEqualityComparer<string> StringCI => String(true);
     }
 }
