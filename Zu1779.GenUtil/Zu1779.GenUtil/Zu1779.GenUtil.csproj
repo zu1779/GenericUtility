@@ -4,12 +4,18 @@
     <TargetFramework>net5.0</TargetFramework>
     <Authors>Zu1779</Authors>
     <PackageTags>Utility</PackageTags>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
-    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
+    <Version>1.0.2</Version>
+    <Product>Zu1779.GenUtil</Product>
+    <Description>Work in progress</Description>
+    <PackageId>Zu1779.GenUtil</PackageId>
+    <PackageReleaseNotes>Work in progress</PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <Company>Zu1779</Company>
   </PropertyGroup>
 
 </Project>
