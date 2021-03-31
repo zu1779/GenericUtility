@@ -41,8 +41,8 @@
         }
 
         public static string Singularize(this string word, params string[] except) =>
-            word.EndsWith('s') && !except.Contains(word) ? word[0..^1] : word;
+            word.EndsWith("s") && !except.Contains(word) ? word.Substring(0, word.Length -1) : word;
         public static IEnumerable<string> Singularize(this IEnumerable<string> words, params string[] exept) =>
-            words.Select(c => c.EndsWith('s') && !exept.Contains(c, GenCompare.StringCI) ? c[0..^1] : c);
+            words.Select(c => c.EndsWith("s") && !exept.Contains(c, GenCompare.StringCI) ? c.Substring(0, c.Length - 1) : c);
     }
 }

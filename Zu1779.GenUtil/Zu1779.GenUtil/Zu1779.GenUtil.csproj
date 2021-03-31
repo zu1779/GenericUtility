@@ -1,21 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <Authors>Zu1779</Authors>
-    <PackageTags>Utility</PackageTags>
-    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
-    <NeutralLanguage>en</NeutralLanguage>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
-    <FileVersion>1.0.2.0</FileVersion>
-    <Version>1.0.2</Version>
-    <Product>Zu1779.GenUtil</Product>
-    <Description>Work in progress</Description>
-    <PackageId>Zu1779.GenUtil</PackageId>
-    <PackageReleaseNotes>Work in progress</PackageReleaseNotes>
-    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
-    <Company>Zu1779</Company>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <Authors>Zu1779</Authors>
+        <PackageTags>Utility</PackageTags>
+        <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+        <NeutralLanguage>en</NeutralLanguage>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <AssemblyVersion>1.0.2.0</AssemblyVersion>
+        <FileVersion>1.0.2.0</FileVersion>
+        <Version>1.0.15</Version>
+        <Product>Zu1779.GenUtil</Product>
+        <Description>Work in progress</Description>
+        <PackageId>Zu1779.GenUtil</PackageId>
+        <PackageReleaseNotes>Work in progress</PackageReleaseNotes>
+        <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+        <Company>Zu1779</Company>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    </ItemGroup>
 
 </Project>

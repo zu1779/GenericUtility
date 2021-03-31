@@ -16,7 +16,7 @@
         }
 
         public bool Equals(T x, T y) => _comp(x, y);
-        public int GetHashCode([DisallowNull] T obj) => _hash(obj);
+        public int GetHashCode(T obj) => _hash(obj);
     }
     public class GenCompare
     {

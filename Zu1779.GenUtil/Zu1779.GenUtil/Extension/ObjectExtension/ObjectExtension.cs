@@ -1,7 +1,11 @@
-﻿namespace Zu1779.GenUtil.Extension.ObjectExtension
-{
-    using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection;
 
+namespace Zu1779.GenUtil.Extension.ObjectExtension
+{
     public static class ObjectExtension
     {
         /// <summary>
@@ -29,5 +33,10 @@
 
             return false;
         }
+
+        public static T As<T>(this object obj) => obj is T t ? t : default;
+
+        public static IEnumerable<T> ToEnumerable<T>(this T obj) => new T[] { obj };
+        public static IQueryable<T> ToQueryable<T>(this T obj) => obj.ToEnumerable().AsQueryable();
     }
 }
