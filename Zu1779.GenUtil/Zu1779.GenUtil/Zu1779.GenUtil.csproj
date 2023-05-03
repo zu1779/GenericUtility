@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
         <Authors>Zu1779</Authors>
         <PackageTags>Utility</PackageTags>
         <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
@@ -9,17 +9,19 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <AssemblyVersion>1.0.2.0</AssemblyVersion>
         <FileVersion>1.0.2.0</FileVersion>
-        <Version>1.0.20</Version>
+        <Version>1.0.29</Version>
         <Product>Zu1779.GenUtil</Product>
         <Description>Work in progress</Description>
         <PackageId>Zu1779.GenUtil</PackageId>
         <PackageReleaseNotes>Work in progress</PackageReleaseNotes>
         <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
         <Company>Zu1779</Company>
+        <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+      <PackageReference Include="System.Security.Permissions" Version="7.0.0" />
     </ItemGroup>
-
+	
 </Project>

@@ -2,6 +2,14 @@
 {
     using System;
 
+    public static class BooleanExtension
+    {
+        /// <summary>
+        /// Return the negation of a boolean
+        /// </summary>
+        public static bool Not(this bool value) => !value;
+    }
+
     public static class CharacterExtension
     {
         /// <summary>

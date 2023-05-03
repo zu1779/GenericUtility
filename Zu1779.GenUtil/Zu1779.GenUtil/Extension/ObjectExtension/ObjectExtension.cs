@@ -35,10 +35,20 @@ namespace Zu1779.GenUtil.Extension.ObjectExtension
             return false;
         }
 
-        public static T As<T>(this object obj) => obj is T t ? t : default;
+        public static T? As<T>(this object obj) => obj is T t ? t : default;
 
         public static IEnumerable<T> ToEnumerable<T>(this T obj) => new T[] { obj };
         public static IQueryable<T> ToQueryable<T>(this T obj) => obj.ToEnumerable().AsQueryable();
+
+        public static T CheckNotNull<T>(this T? obj, string? paramName = null)
+        {
+            if (obj == null)
+            {
+                if (paramName == null) throw new ArgumentNullException();
+                else throw new ArgumentNullException(paramName);
+            }
+            else return (T)obj;
+        }
 
         public static void HandleEvent(object instance, EventInfo eInfo)
         {
